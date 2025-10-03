@@ -67,3 +67,15 @@ footer {
   background: #f9f9f9;
   margin-top: 40px;
 }
+
+/* Remove a cor azul dos links visitados */
+nav a,
+nav a:visited,
+nav a:active {
+  color: inherit; /* mantém a cor herdada (do menu) */
+  text-decoration: none; /* sem sublinhado */
+}
+
+nav a:hover {
+  text-decoration: underline; /* só sublinha quando passar o mouse */
+}
