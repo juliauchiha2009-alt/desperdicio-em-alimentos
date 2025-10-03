@@ -1,7 +1,7 @@
 :root {
-  --bg: #cddff8;      /* fundo geral */
-  --card: #ffffff;    /* fundo de cards */
-  --text: #2c2c2c;    /* texto principal */
+  --bg: #cddff8;
+  --card: #ffffff;
+  --text: #2c2c2c;
   --small: 14px;
 }
 
@@ -33,6 +33,11 @@ nav a {
   text-decoration: none;
   color: var(--text);
   font-weight: bold;
+}
+
+nav a.active {
+  color: #1a73e8; /* destaque para o link da página atual */
+  text-decoration: underline;
 }
 
 main {
