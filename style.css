@@ -1,0 +1,130 @@
+:root{
+  --bg: #c7dff7;        /* fundo geral azul claro */
+  --card: #f1f6fb;      /* fundo de cards/seções */
+  --primary: #f1f6fb;   /* header / barra superior */
+  --accent: #9ac3f7;    /* cor para botões/links */
+  --muted: #e1ecf7;     /* separadores / fundos leves */
+  --text: #1f2d3d;      /* texto principal */
+  --small: 14px;
+}
+
+/* Tipografia */
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: 'Montserrat', system-ui, Arial, sans-serif;
+}
+
+/* HEADER */
+header{
+  background:var(--primary);
+  padding:28px 16px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+header h1{
+  margin:0;
+  font-size:32px;
+  text-transform:uppercase;
+  letter-spacing:6px;
+  color: var(--text);
+  font-family: 'Playfair Display', serif;
+}
+
+/* NAV */
+nav{margin-top:10px}
+nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:inline-flex;
+  gap:16px;
+}
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  font-weight:700;
+  font-size:var(--small);
+  padding:6px 10px;
+  border-radius:8px;
+}
+nav a:hover{
+  background:rgba(31,45,61,0.1);
+}
+nav a.active{
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: default;
+}
+
+/* CONTAINER / SECTIONS */
+main{
+  max-width:1100px;
+  margin:28px auto;
+  padding:0 16px;
+}
+.section{
+  background:var(--card);
+  border-radius:10px;
+  padding:22px;
+  margin-bottom:18px;
+  box-shadow: 0 6px 18px rgba(17,12,11,0.05);
+  border:1px solid var(--muted);
+}
+
+.section h2, .section h3{
+  font-family: 'Playfair Display', serif;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  margin-top:0;
+  color:var(--text);
+}
+
+/* LISTAS */
+ul.clean{padding-left:1rem}
+
+/* BOTÕES */
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  margin-top:10px;
+}
+
+/* IMAGENS */
+img{
+  max-width:90%;
+  height:auto;
+  border-radius:10px;
+  border:1px solid #bfcfe0;
+  box-shadow: 0 8px 20px rgba(11,12,15,0.05);
+  display:block;
+  margin:auto;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:18px 10px;
+  color:#666;
+  font-size:13px;
+  margin-top:20px;
+  background:var(--primary);
+  border-top:1px solid var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width:720px){
+  header h1{font-size:22px;letter-spacing:4px}
+  nav ul{flex-wrap:wrap;justify-content:center}
+}
