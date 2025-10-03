@@ -50,19 +50,18 @@ nav a:link,
 nav a:visited,
 nav a:focus,
 nav a:active {
-  text-decoration: none;
+  text-decoration: none !important;  /* nunca sublinhar */
   font-weight: bold;
-  color: var(--text) !important; /* força a cor */
+  color: var(--text) !important;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: none !important;  /* mesmo ao passar o mouse não sublinha */
   color: var(--text) !important;
 }
 
 nav a.active {
   font-weight: 700;
-  text-decoration: underline;
   cursor: default;
   color: var(--text) !important;
 }
