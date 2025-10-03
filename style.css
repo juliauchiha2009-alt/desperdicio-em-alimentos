@@ -1,81 +1,105 @@
 :root {
-  --bg: #cddff8;
-  --card: #ffffff;
-  --text: #2c2c2c;
+  --bg: #cddff8;        /* fundo geral */
+  --card: #ffffff;      /* fundo de cards/seções */
+  --primary: #cddff8;   /* cor principal */
+  --accent: #9bb6e9;    /* azul mais forte para botões/links */
+  --muted: #f5f7fa;     /* fundos leves */
+  --text: #2c2c2c;      /* texto principal */
   --small: 14px;
+  --radius: 10px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: 'Georgia', serif;
   background-color: var(--bg);
   color: var(--text);
+  line-height: 1.6;
 }
 
 header {
-  background: #f9f9f9;
+  background: var(--muted);
   text-align: center;
-  padding: 20px;
+  padding: 2rem 1rem 1rem 1rem;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 28px;
+  font-size: 2rem;
   letter-spacing: 2px;
 }
 
 nav {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: bold;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
-nav a.active {
-  color: #1a73e8; /* destaque para o link da página atual */
-  text-decoration: underline;
-}
-
-main {
-  padding: 30px;
-  text-align: center;
-}
-
-.section-card {
-  background: var(--card);
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 800px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-.section-card h2 {
-  text-align: center;
-  margin-top: 0;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: var(--small);
-  background: #f9f9f9;
-  margin-top: 40px;
-}
-
-/* Remove a cor azul dos links visitados */
 nav a,
+nav a:link,
 nav a:visited,
+nav a:focus,
 nav a:active {
-  color: inherit; /* mantém a cor herdada (do menu) */
-  text-decoration: none; /* sem sublinhado */
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text) !important; /* força a cor */
 }
 
 nav a:hover {
-  text-decoration: underline; /* só sublinha quando passar o mouse */
+  text-decoration: underline;
+  color: var(--text) !important;
+}
+
+nav a.active {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: default;
+  color: var(--text) !important;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  background: var(--card);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+section p, section li {
+  font-size: 1rem;
+}
+
+section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+footer {
+  background: var(--muted);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: var(--small);
+  color: var(--text);
 }
