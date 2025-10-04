@@ -1,32 +1,110 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Proposta de Valor</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <h1>PROPOSTA DE VALOR</h1>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="proposta.html">Proposta de Valor</a>
-    <a href="personas.html">Personas</a>
-    <a href="paraquem.html">Para quem</a>
-    <a href="como.html">Como</a>
-    <a href="quanto.html">Quanto</a>
-    <a href="contribuir.html">Quero contribuir</a>
-    <a href="sobre.html">Sobre nós</a>
-    <a href="redes.html">Redes sociais</a>
-  </nav>
-</header>
-<main>
-  <div class="section-card">
-    <p><strong>Reduzir o desperdício de alimentos</strong> e garantir refeições nutritivas e seguras para pessoas em vulnerabilidade, fortalecendo também a responsabilidade social das empresas parceiras.</p>
-  </div>
-</main>
-<footer>
-  © 2025 Transformando o Futuro
-</footer>
-</body>
-</html>
+:root {
+  --bg: #e3a7a7;        /* fundo geral */
+  --card: #ffffff;      /* fundo de cards/seções */
+  --primary: #e3a7a7;   /* cor principal */
+  --accent: #d68a8a;    /* rosa mais forte para botões/links */
+  --muted: #fcecec;     /* fundos leves */
+  --text: #2c2c2c;      /* texto principal */
+  --small: 14px;
+  --radius: 10px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--muted);
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* deixa quebrar linha em telas pequenas */
+  gap: 1.5rem;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a,
+nav a:link,
+nav a:visited,
+nav a:focus,
+nav a:active {
+  text-decoration: none !important;
+  font-weight: bold;
+  color: var(--text) !important;
+}
+
+nav a:hover {
+  text-decoration: none !important;
+  color: var(--text) !important;
+}
+
+nav a.active {
+  font-weight: 700;
+  cursor: default;
+  color: var(--text) !important;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  background: var(--card);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+section p, section li {
+  font-size: 1rem;
+}
+
+section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+footer {
+  background: var(--muted);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: var(--small);
+  color: var(--text);
+}
