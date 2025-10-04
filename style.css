@@ -3,102 +3,77 @@
   --card: #ffffff;      /* fundo dos cards */
   --primary: #e3a7a7;   /* cor principal */
   --accent: #d68a8a;    /* tom mais escuro */
-  --muted: #fcecec;     /* fundo claro para header/footer */
+  --muted: #ffeaea;     /* fundo claro para header, títulos e destaques */
   --text: #2c2c2c;      /* texto */
   --small: 14px;
   --radius: 10px;
 }
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Georgia', serif;
-  background-color: var(--bg); /* <-- aqui puxa o rosa */
+  background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  background: var(--muted);
+  background-color: var(--muted);
   text-align: center;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 20px;
 }
 
 header h1 {
-  font-size: 2rem;
-  letter-spacing: 2px;
-}
-
-nav {
-  margin-top: 1rem;
+  margin: 0;
+  font-size: 28px;
+  color: var(--text);
 }
 
 nav ul {
   list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 15px;
 }
 
-nav a,
-nav a:link,
-nav a:visited,
-nav a:focus,
-nav a:active {
-  text-decoration: none !important;  /* nunca sublinhar */
+nav a {
+  text-decoration: none;
   font-weight: bold;
-  color: var(--text) !important;
+  color: var(--text);
 }
 
-nav a:hover {
-  text-decoration: none !important;  /* mesmo ao passar o mouse não sublinha */
-  color: var(--text) !important;
-}
-
+nav a:hover,
 nav a.active {
-  font-weight: 700;
-  cursor: default;
-  color: var(--text) !important;
+  color: var(--accent);
 }
 
 main {
-  padding: 2rem;
+  padding: 20px;
 }
 
-section {
-  background: var(--card);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+.section-card {
+  background-color: var(--card);
+  margin: 20px auto;
+  padding: 20px;
   border-radius: var(--radius);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  max-width: 900px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  color: var(--text);
+.section-card h2 {
+  color: var(--accent);
 }
 
-section p, section li {
-  font-size: 1rem;
-}
-
-section ul {
-  list-style: disc;
-  margin-left: 1.5rem;
+ul {
+  padding-left: 20px;
 }
 
 footer {
-  background: var(--muted);
+  background-color: var(--muted);
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 15px;
   font-size: var(--small);
-  color: var(--text);
 }
