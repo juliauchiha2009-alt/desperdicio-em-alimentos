@@ -60,17 +60,19 @@ nav a:focus,
 nav a:active {
   text-decoration: none !important;
   font-weight: bold;
-  color: var(--text) !important;
+  color: var(--text) !important; /* cor preta padrão */
 }
 
+/* Hover (quando passa o mouse em cima) */
 nav a:hover {
   color: var(--accent) !important;
 }
 
+/* Página atual (link ativo do menu) */
 nav a.active {
   font-weight: 700;
   cursor: default;
-  color: var(--accent) !important;
+  color: var(--accent) !important; /* fica rosa escuro */
 }
 
 /* Área principal */
