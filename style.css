@@ -2,11 +2,18 @@
   --bg: #e3a7a7;        /* fundo geral */
   --card: #ffffff;      /* fundo dos cards */
   --primary: #e3a7a7;   /* cor principal */
-  --accent: #d68a8a;    /* tom mais escuro */
-  --muted: #ffeaea;     /* fundo claro para header, títulos e destaques */
-  --text: #2c2c2c;      /* texto */
+  --accent: #d68a8a;    /* tom mais escuro para títulos e destaques */
+  --muted: #ffeaea;     /* fundo claro para header e footer */
+  --text: #2c2c2c;      /* cor do texto */
   --small: 14px;
   --radius: 10px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,66 +21,103 @@ body {
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
 }
 
+/* Cabeçalho e Navegação */
 header {
   background-color: var(--muted);
   text-align: center;
-  padding: 20px;
+  padding: 2rem 1rem 1rem 1rem;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 28px;
+  font-size: 2rem;
+  letter-spacing: 2px;
   color: var(--text);
+}
+
+nav {
+  margin-top: 1rem;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 10px 0 0 0;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
 }
 
-nav a {
-  text-decoration: none;
+nav li {
+  display: inline;
+}
+
+nav a,
+nav a:link,
+nav a:visited,
+nav a:focus,
+nav a:active {
+  text-decoration: none !important;
   font-weight: bold;
-  color: var(--text);
+  color: var(--text) !important;
 }
 
-nav a:hover,
+nav a:hover {
+  color: var(--accent) !important;
+}
+
 nav a.active {
-  color: var(--accent);
+  font-weight: 700;
+  cursor: default;
+  color: var(--accent) !important;
 }
 
+/* Área principal */
 main {
-  padding: 20px;
+  padding: 2rem;
 }
 
+/* Cada seção vira um card branco */
+section,
 .section-card {
-  background-color: var(--card);
-  margin: 20px auto;
-  padding: 20px;
+  background: var(--card);
+  padding: 1.5rem;
+  margin: 1.5rem auto;
   border-radius: var(--radius);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   max-width: 900px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Títulos das seções */
+section h2,
 .section-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
   color: var(--accent);
 }
 
-ul {
-  padding-left: 20px;
+/* Texto e listas dentro dos cards */
+section p, 
+section li,
+.section-card p,
+.section-card li {
+  font-size: 1rem;
 }
 
+section ul,
+.section-card ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* Rodapé */
 footer {
   background-color: var(--muted);
   text-align: center;
-  padding: 15px;
+  padding: 1rem;
+  margin-top: 2rem;
   font-size: var(--small);
+  color: var(--text);
 }
