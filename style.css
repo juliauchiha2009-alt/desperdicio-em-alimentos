@@ -1,10 +1,10 @@
 :root {
-  --bg: #cddff8;        /* fundo geral */
-  --card: #ffffff;      /* fundo de cards/seções */
-  --primary: #cddff8;   /* cor principal */
-  --accent: #9bb6e9;    /* azul mais forte para botões/links */
-  --muted: #f5f7fa;     /* fundos leves */
-  --text: #2c2c2c;      /* texto principal */
+  --bg: #e3a7a7;        /* fundo geral */
+  --card: #ffffff;      /* fundo dos cards */
+  --primary: #e3a7a7;   /* cor principal */
+  --accent: #d68a8a;    /* tom mais escuro */
+  --muted: #fcecec;     /* fundo claro para header/footer */
+  --text: #2c2c2c;      /* texto */
   --small: 14px;
   --radius: 10px;
 }
@@ -18,7 +18,7 @@
 
 body {
   font-family: 'Georgia', serif;
-  background-color: var(--bg);
+  background-color: var(--bg); /* <-- aqui puxa o rosa */
   color: var(--text);
   line-height: 1.6;
 }
